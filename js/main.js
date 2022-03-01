@@ -1,5 +1,5 @@
-import * as THREE from '/three.js';
-import * as TWEEN from '/tween.js';
+import * as THREE from 'three.js';
+import * as TWEEN from 'tween.js';
 
 // Creating View Camera
 const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
