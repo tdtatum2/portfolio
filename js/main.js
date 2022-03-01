@@ -18,8 +18,8 @@ star1_scene.add(star1Light);
 
 
 // Moon :D
-const moonTexture = new THREE.TextureLoader().load('../imgs/moontexture.jpg');
-const normalTexture = new THREE.TextureLoader().load('../imgs/normalmap.jpg');
+const moonTexture = new THREE.TextureLoader().load('./imgs/moontexture.jpg');
+const normalTexture = new THREE.TextureLoader().load('./imgs/normalmap.jpg');
 
 const geometry = new THREE.SphereGeometry(0.2, 32, 32);
 const material = new THREE.MeshStandardMaterial({map: moonTexture, normalMap: normalTexture});
@@ -45,7 +45,7 @@ renderer.setAnimationLoop( animation );
 
 
 // Setting Background of 3D Space
-const spaceTexture = new THREE.TextureLoader().load('../imgs/space3.jpg');
+const spaceTexture = new THREE.TextureLoader().load('./imgs/space3.jpg');
 scene.background = spaceTexture;
 
 // Animation Function
