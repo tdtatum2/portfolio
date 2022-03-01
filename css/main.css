@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', serif;
+}
+
+body {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+#intro-screen {
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    position: absolute;
+}
+
+#info-pages {
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFF;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 50%;
+}
+
+.text-box {
+    color: #FFF;
+    position: absolute;
+    bottom: 10%;
+}
+
+.text-box p {
+    font-size: 3em;
+    font-weight: 600;
+    animation: fade-in-down 4s ease;
+}
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0%;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.text-box h1 {
+    opacity: 0%;
+    font-size: 13.5em;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #FFF;
+    animation: fade-in-right 2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fade-in-right {
+    0% {
+        transform: translateX(-15%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
+.text-box h3 {
+    opacity: 0%;
+    font-size: 2.5em;
+    font-weight: 500px;
+    animation: fade-in-up 2s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(35%);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0%);
+    }
+}
+
+.neon-button {
+    opacity: 0%;
+    font-size: 1.5em;
+    color: #FFF;
+    display: inline-block;
+    text-decoration: none;
+    border: #FFF 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    animation: pulse 4s linear infinite, fade-in 3s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.25), 0 0 0.25em #FFF;
+    }
+    50% {
+        text-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25), 0 0 1em #FFF;
+    }
+    100% {
+        text-shadow: 0 0 0.125em rgba(0, 0, 0, 0.25), 0 0 0.25em #FFF;
+    }
+}
+
+.neon-button:hover {
+    color: #FFF;
+}
+
+.social-icon {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+.social-icon img {
+    width: 35px;
+    display: block;
+    margin: 25px 5px;
+}
+
+
+.fade-out {
+    animation: fade-out 2s ease forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 100%;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+.fade-in-visible {
+    animation: fade-in-visible 2s ease forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fade-in-visible {
+    0% {
+        opacity: 0%;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 100%;
+        visibility: visible;
+    }
+}
